@@ -1,11 +1,12 @@
 import { UserInfo } from 'components/User/User'
 import { UserStats } from 'components/UserStats/UserStats'
+import { Container } from 'components/App/App.styled'
 
 export const App = () => {
-	return <>
+	return <Container>
 		<UserInfo />
 		<UserStats />
-	</>
+	</Container>
 };
 
 
