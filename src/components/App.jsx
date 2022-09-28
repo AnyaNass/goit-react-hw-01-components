@@ -1,16 +1,14 @@
+import { UserInfo } from 'components/User/User'
+import { UserStats } from 'components/UserStats/UserStats'
+
 export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
+	return <>
+		<UserInfo />
+		<UserStats />
+	</>
 };
+
+
+// компоненты App,
+// UserInfo avatar - string, username - string, tag - str, location - str,
+// UserStats - "followers": number, "views": number, "likes": number
