@@ -1,20 +1,19 @@
 import propTypes from 'prop-types'
-import user from '../../user'
 import defaultImg from '../def-img.jpg'
-import { Decription, Avatar, UserName, Tag, Location } from './User.styled'
+import { Description, Avatar, UserName, Tag, Location } from './User.styled'
 
 export const UserInfo = ({ username, avatar = defaultImg, tag, location }) => {
-	return <Decription>
-		<Avatar src={user.avatar} alt={user.username} />
-		<UserName>{user.username}</UserName>
-		<Tag>@{user.tag}</Tag>
-		<Location>{user.location}</Location>
-	</Decription>
+	return <Description>
+		<Avatar src={avatar} alt={username} />
+		<UserName>{username}</UserName>
+		<Tag>@{tag}</Tag>
+		<Location>{location}</Location>
+	</Description>
 }
 
 UserInfo.propTypes = {
 	username: propTypes.string,
 	avatar: propTypes.string,
-	tag: propTypes.string.isRequired,
-	location: propTypes.string.isRequired,
+	tag: propTypes.string,
+	location: propTypes.string,
 }

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-export const Decription = styled.div`
+export const Description = styled.div`
 	padding: 16px 0;
 `
 
