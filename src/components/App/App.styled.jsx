@@ -27,3 +27,8 @@ export const FriendsList = styled.ul`
 	flex-direction: column;
 	gap: 8px;
 `
+
+export const TransactionHistory = styled.table`
+	width: 900px;
+	margin: 40px auto;
+`

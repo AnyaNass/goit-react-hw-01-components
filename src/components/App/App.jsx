@@ -1,6 +1,7 @@
 import user from '../../user'
 import data from '../../data'
 import friends from '../../friends'
+import transactions from '../../transactions'
 
 import { UserInfo } from 'components/User/User'
 import { UserStats } from 'components/UserStats/UserStats'
@@ -8,6 +9,10 @@ import { Container, StatisticsListContainer, StatisticsContainer, FriendsList } 
 import { Statistics } from 'components/Statistics/Statistics'
 import { StatisticsList } from 'components/StatisticsList/StatisticsList'
 import { Friend } from 'components/Friends/Friends'
+import { TransactionHistory } from 'components/App/App.styled'
+import { TransactionTableHead } from 'components/TransactionTableHead/TransactionTableHead'
+import { TransactionItem } from 'components/TransactionItem/TransactionItem'
+
 
 export const App = () => {
 	return <>
@@ -38,6 +43,17 @@ export const App = () => {
 				status={friend.isOnline}
 			/>)}
 		</FriendsList>
+		<TransactionHistory>
+			<TransactionTableHead type="Type" amount="Amount" currency="Currency" />
+			<tbody>
+				{transactions.map(transaction => <TransactionItem
+					key={transaction.id}
+					type={transaction.type}
+					amount={transaction.amount}
+					currency={transaction.currency}
+				/>)}
+			</tbody>
+		</TransactionHistory>
 	</>
 };
 
