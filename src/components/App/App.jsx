@@ -1,32 +1,38 @@
-import user from '../../user'
-import data from '../../data'
-import friends from '../../friends'
-import transactions from '../../transactions'
+import user from '../../data/user'
+import data from '../../data/data'
+import friends from '../../data/friends'
+import transactions from '../../data/transactions'
 
-import { UserInfo } from 'components/User/User'
-import { UserStats } from 'components/UserStats/UserStats'
-import { Container, StatisticsListContainer, StatisticsContainer, FriendsList } from 'components/App/App.styled'
-import { Statistics } from 'components/Statistics/Statistics'
-import { StatisticsList } from 'components/StatisticsList/StatisticsList'
-import { Friend } from 'components/Friends/Friends'
-import { TransactionHistory } from 'components/App/App.styled'
-import { TransactionTableHead } from 'components/TransactionTableHead/TransactionTableHead'
-import { TransactionItem } from 'components/TransactionItem/TransactionItem'
+import { UserContainer } from '../User/UserContainer/UserContainer'
+import { UserInfo } from 'components/User/UserInfo/User'
+import { UserStats } from 'components/User/UserStats/UserStats'
+
+import { StatisticsContainer } from '../Statistics/StatisticsContainer/StatisticsContainer'
+import { StatisticsListContainer } from '../Statistics/StatisticsListContainer/StatisticsListContainer'
+import { StatisticsHeader } from 'components/Statistics/StatisticsHeader/StatisticsHeader'
+import { StatisticsList } from 'components/Statistics/StatisticsList/StatisticsList'
+
+import { FriendsList } from '../Friends/FriendsList/FriendsList'
+import { Friend } from 'components/Friends/FriendCard/Friends'
+
+import { TransactionHistory } from '../Transactions/TransactionHistory/TransactionHistory'
+import { TransactionTableHead } from 'components/Transactions/TransactionTableHead/TransactionTableHead'
+import { TransactionItem } from 'components/Transactions/TransactionItem/TransactionItem'
 
 
 export const App = () => {
 	return <>
-		<Container>
+		<UserContainer>
 			<UserInfo
 				avatar={user.avatar}
 				username={user.username}
 				tag={user.tag}
 				location={user.location}
 			/>
-			<UserStats />
-		</Container>
+			<UserStats user={user} />
+		</UserContainer>
 		<StatisticsContainer>
-			<Statistics title="Upload stats" />
+			<StatisticsHeader title="Upload stats" />
 			<StatisticsListContainer>
 				{data.map(element => < StatisticsList
 					key={element.id}

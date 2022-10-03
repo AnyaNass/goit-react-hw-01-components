@@ -1,5 +1,5 @@
 import propTypes from 'prop-types'
-import { ListElement, ListElementLable, ListElementPercentage } from 'components/StatisticsList/StatisticsList.styled'
+import { ListElement, ListElementLable, ListElementPercentage } from 'components/Statistics/StatisticsList/StatisticsList.styled'
 import { getRandomColor } from 'components/utils/getRandomColor'
 
 export const StatisticsList = ({ id, label, percentage }) => {
@@ -14,6 +14,6 @@ export const StatisticsList = ({ id, label, percentage }) => {
 
 StatisticsList.propTypes = {
 	id: propTypes.string,
-	label: propTypes.string,
-	percentage: propTypes.number,
+	label: propTypes.string.isRequired,
+	percentage: propTypes.number.isRequired,
 }

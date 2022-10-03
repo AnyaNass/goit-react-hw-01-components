@@ -1,8 +1,7 @@
 import propTypes from 'prop-types'
-import user from '../../user'
-import { StatsList, StatsListItem, StatsItemLable, StatsItemQuantity } from 'components/UserStats/UserStats.styled'
+import { StatsList, StatsListItem, StatsItemLable, StatsItemQuantity } from 'components/User/UserStats/UserStats.styled'
 
-export const UserStats = ({ stats }) => {
+export const UserStats = ({ user }) => {
 	return <StatsList>
 		<StatsListItem>
 			<StatsItemLable >Followers</StatsItemLable>

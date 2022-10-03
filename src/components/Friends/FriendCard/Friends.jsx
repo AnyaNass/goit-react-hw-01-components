@@ -1,5 +1,5 @@
 import propTypes from 'prop-types'
-import { FriendCard, FriendAvatar, FriendName, Chip } from 'components/Friends/Friends.styled'
+import { FriendCard, FriendAvatar, FriendName, Chip } from 'components/Friends/FriendCard/Friends.styled'
 
 export const Friend = ({ avatar, name, status, id }) => {
 	return <FriendCard key={id}>

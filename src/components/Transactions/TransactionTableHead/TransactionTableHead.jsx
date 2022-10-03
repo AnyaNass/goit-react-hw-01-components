@@ -1,5 +1,5 @@
 import propTypes from 'prop-types'
-import { ColumnTitle } from 'components/TransactionTableHead/TransactionTableHead.styled'
+import { ColumnTitle } from 'components/Transactions/TransactionTableHead/TransactionTableHead.styled'
 
 export const TransactionTableHead = ({ type, amount, currency }) => {
 	return <thead>

@@ -1,5 +1,5 @@
 import propTypes from 'prop-types'
-import { Item, ItemColumn } from 'components/TransactionItem/TransactionItem.styled'
+import { Item, ItemColumn } from 'components/Transactions/TransactionItem/TransactionItem.styled'
 
 export const TransactionItem = ({ id, type, amount, currency }) => {
 	return <ItemColumn key={id}>
